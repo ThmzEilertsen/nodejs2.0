@@ -9,7 +9,7 @@ Create Node.js CRUD RESTapi. \
 
 Tools used : \
  express - https://www.npmjs.com/package/express \
- express-handlebars - https://www.npmjs.com/search?q=express-handlebars \
+ express-handlebars - https://www.npmjs.com/package/express-handlebars \
  handlebars - https://www.npmjs.com/package/handlebars \
  body-parser - https://www.npmjs.com/package/body-parser \
  mongoose - https://www.npmjs.com/package/mongoose \
