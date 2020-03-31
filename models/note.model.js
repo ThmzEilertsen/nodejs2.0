@@ -16,10 +16,12 @@ var noteSchema = new mongoose.Schema({
         required: 'todo content must be provided.'
     },
     createDate: {
-        type: Date
+        type: Date,
+        get: d => d ? d.toISOString().slice(0, 10) : ""
     },
     finishDate: {
-        type: Date
+        type: Date,
+        get: d => d ? d.toISOString().slice(0, 10) : ""
     },
     status: {
         type: Boolean,

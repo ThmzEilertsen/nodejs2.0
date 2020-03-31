@@ -1,40 +1,35 @@
 <h3>{{viewTitle}}</h3>
 <form action="/note" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{note._id}}">
-        <!-- Todo Creater, assignee and content  -->
-        <div class="form-group">
-            <label>Created by</label>
-            <input type="text" class="form-control" name="fullName" placeholder="Creator" value="{{note.fullName}}">
-            <div class="text-warning">
-                {{note.fullNameError}}
-            </div>
+    <!-- Todo Creater, assignee and content  -->
+    <div class="form-group">
+        <label>Created by</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Creator" value="{{note.fullName}}">
+        <div class="text-warning">
+            {{note.fullNameError}}
         </div>
-        <div class="form-group">
-            <label>Assigned to</label>
-            <input type="text" class="form-control" name="assigned" placeholder="Assigned" value="{{note.assigned}}">
-        </div>
-        <div class="form-group">
-            <label>Todo </label>
-            <input type="text" class="form-control" name="todoContent" placeholder="Specific task todo..." value="{{note.todoContent}}">
+        <label>Assigned to</label>
+        <input type="text" class="form-control" name="assigned" placeholder="Assigned" value="{{note.assigned}}">
+        <label>Task</label>
+        <input type="text" class="form-control" name="todoContent" placeholder="Specific task todo..."
+            value="{{note.todoContent}}">
         <div class="text-warning">
             {{note.todoContentError}}
         </div>
-        <div class="form-group">
-            <label>Status</label>
-            <input type="text" class="form-control" name="assigned" placeholder="Assigned" value="{{note.status}}">
+        <label>Done</label>
+        <input type="checkbox" class="form-control" name="status" value="true" {{#if note.status}}checked{{/if}}>
+    </div>
+    <!-- Row'd Dates -->
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Created on</label>
+            <input type="date" class="form-control" name="createDate" value="{{note.createDate}}">
         </div>
+        <div class="form-group col-md-6">
+            <label>Due date</label>
+            <input type="date" class="form-control" name="finishDate" value="{{note.finishDate}}">
         </div>
-        <!-- Row'd Dates -->
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label>Created on</label>
-                <input type="Date" class="form-control" name="createDate" placeholder="Created date" value="{{note.crateDate}}">
-            </div>
-            <div class="form-group col-md-6">
-                <label>Due date</label>
-                <input type="date" class="form-control" name="finishDate" placeholder="Finish date" value="{{note.finishDate}}">
-            </div>
-        </div>
+    </div>
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database">Submit todo</i></button>
         <a class="btn btn-secondary" href="/note/list"><i class="fa fa-list-alt"></i>View All</a>
