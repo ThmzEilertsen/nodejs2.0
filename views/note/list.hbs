@@ -1,0 +1,30 @@
+<h3><a class="btn btn-secondary" href="/note"><i class="fa fa-plus"></i> Create New</a> Todo-note's List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Assigned</th>
+            <th>Todo</th>
+            <th>Done</th>
+            <th>Created on</th>
+            <th>Due date</th>
+            <th>Edit or delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.assigned}}</td>
+            <td>{{this.todoContent}}</td>
+            <td>{{this.status}}</td>
+            <td>{{this.createDate}}</td>
+            <td>{{this.finishDate}}</td>
+            <td>
+                <a href="/note/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/note/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
