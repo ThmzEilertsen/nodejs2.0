@@ -8,8 +8,15 @@ Create Node.js CRUD RESTapi. \
     - Delete 
 
 Tools used : \
- express - 
- express-handlebars -
- handlebars -
- body-parser -
- mongoose - https://www.npmjs.com/package/mongoose
+ express - https://www.npmjs.com/package/express \
+ express-handlebars - https://www.npmjs.com/search?q=express-handlebars \
+ handlebars - https://www.npmjs.com/package/handlebars \
+ body-parser - https://www.npmjs.com/package/body-parser \
+ mongoose - https://www.npmjs.com/package/mongoose \
+ mongoDB - https://www.mongodb.com/
+
+To run : \
+Start MongoDB on default port 27017 - easy monitoring can be done with MongoDB Compass \
+Run server with : node server.js - runs on port 3000 \
+navigate to http://localhost:3000/note/ - Create todo note. \
+navigate to http://localhost:3000/note/list - See all todo notes. \
