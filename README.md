@@ -8,3 +8,8 @@ Create Node.js CRUD RESTapi. \
     - Delete 
 
 Tools used : \
+ express - 
+ express-handlebars -
+ handlebars -
+ body-parser -
+ mongoose - https://www.npmjs.com/package/mongoose
